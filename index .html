@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المهندس علي إدريس | مهندس ميكانيكي</title>
+<meta name="description" content="الصفحة الشخصية للمهندس علي إدريس، مهندس ميكانيكي: التصميم الميكانيكي، الرسم الهندسي، والاستشارات الفنية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#08111F; --navy-2:#0D1B30; --line:#1B2F4D;
+  --blue:#1479FF; --cyan:#22D3EE; --text:#E6EEF8; --muted:#93A6BF;
+  color-scheme: dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--navy); color:var(--text);
+  font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;
+  line-height:1.9; font-size:18px;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+header strong{font-weight:700}
+nav{display:flex;gap:22px;font-size:16px;color:var(--muted)}
+nav a{text-decoration:none}
+nav a:hover{color:var(--cyan)}
+
+/* Hero: the gear is the one memorable element */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{position:relative;padding-top:96px;padding-bottom:104px}
+.hero h1{font-size:clamp(40px,7vw,76px);line-height:1.2;font-weight:700;letter-spacing:0}
+.hero .role{margin-top:14px;font-size:clamp(20px,3vw,28px);color:var(--cyan);font-weight:500}
+.hero p.lead{margin-top:22px;max-width:34em;color:var(--muted)}
+.actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 26px;border-radius:6px;text-decoration:none;font-weight:500;font-size:17px;border:1px solid var(--blue)}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.primary:hover{background:#2f88ff}
+.btn.ghost{color:var(--text)}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.gear{position:absolute;left:-90px;top:50%;width:560px;height:560px;margin-top:-280px;opacity:.55;pointer-events:none}
+.gear svg{width:100%;height:100%}
+.gear .spin{transform-origin:300px 300px;animation:turn 90s linear infinite}
+@keyframes turn{to{transform:rotate(-360deg)}}
+@media (prefers-reduced-motion:reduce){.gear .spin{animation:none}}
+
+section{padding:76px 0;border-bottom:1px solid var(--line)}
+h2{font-size:30px;line-height:1.4;margin-bottom:22px}
+.about p{max-width:38em;color:var(--muted)}
+
+.services ul{list-style:none;margin-top:8px}
+.services li{display:grid;grid-template-columns:230px 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line)}
+.services li:last-child{border-bottom:1px solid var(--line)}
+.services h3{font-size:20px;color:var(--text);font-weight:500;line-height:1.6}
+.services p{color:var(--muted);font-size:17px}
+
+.contact p{color:var(--muted);max-width:34em}
+.contact ul{list-style:none;margin-top:26px}
+.contact li{display:grid;grid-template-columns:230px 1fr;gap:24px;padding:16px 0;border-top:1px solid var(--line);align-items:baseline}
+.contact li:last-child{border-bottom:1px solid var(--line)}
+.contact li span{color:var(--muted);font-size:17px}
+.contact li a{color:var(--text);text-decoration:none;font-weight:500;justify-self:start;border-bottom:1px solid var(--blue);padding-bottom:1px;word-break:break-word}
+.contact li a:hover{color:var(--cyan);border-color:var(--cyan)}
+.contact li a.num{direction:ltr;unicode-bidi:isolate}
+
+footer{padding:28px 0;color:var(--muted);font-size:15px}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  nav{gap:14px;font-size:15px}
+  .hero .wrap{padding-top:64px;padding-bottom:72px}
+  .gear{left:-200px;opacity:.28}
+  .services li,.contact li{grid-template-columns:1fr;gap:2px}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <strong>علي إدريس</strong>
+    <nav aria-label="التنقل">
+      <a href="#about">نبذة</a>
+      <a href="#services">الخدمات</a>
+      <a href="#contact">التواصل</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="gear" aria-hidden="true"><svg viewBox="0 0 600 600" id="gearSvg"></svg></div>
+    <div class="wrap">
+      <h1>المهندس<br>علي إدريس</h1>
+      <p class="role">مهندس ميكانيكي</p>
+      <p class="lead">أصمّم الحلول الميكانيكية وأحوّلها إلى رسومات ومخططات جاهزة للتنفيذ، وأقدّم الاستشارات الفنية للمشاريع.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">تواصل معي</a>
+        <a class="btn ghost" href="#services">الخدمات</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>نبذة</h2>
+      <!-- عدّل هذه الفقرة لتناسب خبرتك الحقيقية: التخصص، الجامعة، سنوات الخبرة، المجالات التي عملت بها -->
+      <p>مهندس ميكانيكي مهتم بالتصميم والتحليل والإشراف على التنفيذ. أعمل مع الأفراد والشركات على مشاريع تتطلب دقة في الحسابات ووضوحًا في المخططات.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="wrap">
+      <h2>الخدمات</h2>
+      <!-- عدّل القائمة أو أضف خدمات: انسخ عنصر li كاملًا -->
+      <ul>
+        <li><h3>التصميم الميكانيكي</h3><p>تصميم الأجزاء والمجمّعات الميكانيكية مع مراعاة التصنيع والتكلفة.</p></li>
+        <li><h3>الرسم الهندسي</h3><p>إعداد المخططات التنفيذية والتفصيلية بحسب المواصفات المطلوبة.</p></li>
+        <li><h3>أنظمة التكييف والتهوية</h3><p>حسابات الأحمال واختيار المعدات وتخطيط الشبكات.</p></li>
+        <li><h3>الاستشارات الفنية</h3><p>مراجعة التصاميم، وتقييم الحلول، وتحديد المشكلات الميكانيكية وأسبابها.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>التواصل</h2>
+      <p>أرسل لي وصفًا مختصرًا لمشروعك وسأرد عليك.</p>
+      <ul>
+        <li><span>هاتف</span><a class="num" href="tel:+963998559469">+963 998 559 469</a></li>
+        <li><span>هاتف ثانٍ</span><a class="num" href="tel:+963948349086">+963 948 349 086</a></li>
+        <li><span>واتساب</span><a href="https://wa.me/qr/YO2JRHN42ITKM1" target="_blank" rel="noopener">ابدأ محادثة</a></li>
+        <li><span>واتساب ثانٍ</span><a href="https://wa.me/qr/TXM7WYGI7FHMP1" target="_blank" rel="noopener">ابدأ محادثة</a></li>
+        <li><span>تلغرام</span><a class="num" href="https://t.me/ENG_ALIEDRIS" target="_blank" rel="noopener">@ENG_ALIEDRIS</a></li>
+        <li><span>البريد الإلكتروني</span><a class="num" href="mailto:aloshitv2001@gmail.com">aloshitv2001@gmail.com</a></li>
+        <li><span>فيسبوك</span><a href="https://www.facebook.com/share/1964A7dSzU/" target="_blank" rel="noopener">صفحتي على فيسبوك</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> المهندس علي إدريس</div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById("yr").textContent=new Date().getFullYear();
+
+  /* رسم ترس هندسي مع خطوط أبعاد */
+  var N=18,r1=168,r2=206,cx=300,cy=300,s=2*Math.PI/N,pts=[];
+  for(var i=0;i<N;i++){
+    var a=i*s;
+    [[0,r1],[.15,r2],[.55,r2],[.7,r1]].forEach(function(p){
+      var t=a+p[0]*s;pts.push((cx+p[1]*Math.cos(t)).toFixed(1)+","+(cy+p[1]*Math.sin(t)).toFixed(1));
+    });
+  }
+  var g='<g class="spin" fill="none" stroke-linejoin="round">'
+   +'<polygon points="'+pts.join(" ")+'" stroke="#1479FF" stroke-width="2"/>'
+   +'<circle cx="300" cy="300" r="120" stroke="#1B2F4D" stroke-width="1.5"/>'
+   +'<circle cx="300" cy="300" r="46" stroke="#22D3EE" stroke-width="2"/>'
+   +'<circle cx="300" cy="300" r="18" stroke="#1479FF" stroke-width="1.5"/>';
+  for(var k=0;k<6;k++){
+    var t=k*Math.PI/3,x1=cx+60*Math.cos(t),y1=cy+60*Math.sin(t),x2=cx+104*Math.cos(t),y2=cy+104*Math.sin(t);
+    g+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" stroke="#1B2F4D" stroke-width="1.5"/>';
+  }
+  g+='</g>'
+   +'<g stroke="#22D3EE" stroke-width="1" opacity=".7">'
+   +'<line x1="60" y1="300" x2="540" y2="300" stroke-dasharray="10 6"/>'
+   +'<line x1="300" y1="60" x2="300" y2="540" stroke-dasharray="10 6"/></g>';
+  document.getElementById("gearSvg").innerHTML=g;
+})();
+</script>
+</body>
+</html>
